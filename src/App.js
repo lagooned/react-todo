@@ -1,16 +1,13 @@
 
-import './App.css';
+import './App.css'
+import TodoItem from './TodoItem'
 
-const App = () => {
-  return (
-      <div>
-        <form action="#">
-          <label className="todo-item"><input type="checkbox" />item 1</label>
-          <label className="todo-item"><input type="checkbox" />item 2</label>
-          <label className="todo-item"><input type="checkbox" />item 3</label>
-        </form>
-      </div>
-  );
-}
+const App = () => (
+  <div>
+    <TodoItem />
+    <TodoItem />
+    <TodoItem />
+  </div>
+);
 
 export default App;
