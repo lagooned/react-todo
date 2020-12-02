@@ -5,9 +5,9 @@ const App = () => {
   return (
       <div>
         <form action="#">
-          <label><input type="checkbox" />item 1</label>
-          <label><input type="checkbox" />item 2</label>
-          <label><input type="checkbox" />item 3</label>
+          <label className="todo-item"><input type="checkbox" />item 1</label>
+          <label className="todo-item"><input type="checkbox" />item 2</label>
+          <label className="todo-item"><input type="checkbox" />item 3</label>
         </form>
       </div>
   );
