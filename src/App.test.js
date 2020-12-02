@@ -5,8 +5,8 @@ test('app renders', () => {
   render(<App />);
 });
 
-test('app has 3 list items', () => {
+test('app has list items', () => {
   render(<App />)
-  const todoItems = screen.getAllByLabelText('item')
-  expect(todoItems).toHaveLength(3)
+  const todoItems = screen.getAllByRole('checkbox')
+  expect(todoItems.length).toBeGreaterThan(0);
 });
