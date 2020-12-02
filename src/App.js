@@ -3,7 +3,7 @@ import './App.css'
 import TodoItem from './TodoItem'
 
 const App = () => (
-  <div>
+  <div className="todo-items">
     <TodoItem />
     <TodoItem />
     <TodoItem />

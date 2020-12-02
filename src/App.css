@@ -1,4 +1,21 @@
 
 .todo-item {
+    background-color: #fff;
     display: block;
+    border: .1em solid black;
+    padding: 1em;
+    margin-bottom: .2em;
+    border-radius: .5em / .5em;
+}
+
+.todo-item input {
+    margin-right: .67em;
+}
+
+.todo-items {
+    margin: auto;
+    padding: 1em;
+    width: 25%;
+    background-color: #eee;
+    border: .1em solid #ddd;
 }
