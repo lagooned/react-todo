@@ -15,6 +15,10 @@
     margin-right: .67em;
 }
 
+.todo-items label {
+    user-select: none;
+}
+
 .todo-items {
     margin: auto;
     padding: 1em;
