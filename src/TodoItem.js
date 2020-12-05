@@ -1,6 +1,6 @@
 
-const TodoItem = () => (
-  <label className="todo-item"><input type="checkbox" />item</label>
+const TodoItem = (props) => (
+  <label className="todo-item"><input type="checkbox" />{props.text}</label>
 );
 
 export default TodoItem

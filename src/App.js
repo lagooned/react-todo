@@ -4,9 +4,9 @@ import TodoItem from './TodoItem'
 
 const App = () => (
   <div className="todo-items">
-    <TodoItem />
-    <TodoItem />
-    <TodoItem />
+    <TodoItem text="item" />
+    <TodoItem text="item" />
+    <TodoItem text="item" />
   </div>
 );
 
