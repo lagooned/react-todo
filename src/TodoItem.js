@@ -3,11 +3,18 @@ import React, { Component } from 'react'
 
 class TodoItem extends Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
-            completed: false
+            completed: this.props.data.completed || false
         }
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange(event) {
+        this.setState(prevState => {
+            return {completed: !prevState.completed}
+        })
     }
 
     render() {
@@ -15,11 +22,7 @@ class TodoItem extends Component {
             <input
                 type="checkbox"
                 checked={this.state.completed}
-                onChange={() => this.setState(prevState => {
-                    return {
-                        completed: !prevState.completed
-                    }
-                })}
+                onChange={this.handleChange}
             />
             {this.props.data.text}
         </label>

@@ -12,6 +12,18 @@ test('todo renders with text', () => {
   expect(todoItemWithSpecificText).toBeInTheDocument()
 });
 
+test('todo has default state false', () => {
+  render(<TodoItem data={{text: "TEST_TEXT"}} />)
+  const todoItemCheckbox = screen.getByRole('checkbox')
+  expect(todoItemCheckbox.checked).toEqual(false)
+})
+
+test('todo has state from prop', () => {
+  render(<TodoItem data={{text: "TEST_TEXT", completed: true}} />)
+  const todoItemCheckbox = screen.getByRole('checkbox')
+  expect(todoItemCheckbox.checked).toEqual(true)
+})
+
 test('todo negates completed state', () => {
   render(<TodoItem data={{text: "TEST_TEXT"}} />)
   const todoItemCheckbox = screen.getByRole('checkbox')
