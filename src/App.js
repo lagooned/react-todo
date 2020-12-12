@@ -12,10 +12,15 @@ class App extends Component {
         this.state = {
             todoData: todoData
         }
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange(event) {
+
     }
 
     getTodoItems() {
-        return this.state.todoData.map(t => <TodoItem key={t.key} data={t} />)
+        return this.state.todoData.map(t => <TodoItem key={t.key} data={t} handleChange={this.handleChange}/>)
     }
 
     render() {
