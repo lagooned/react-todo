@@ -14,13 +14,13 @@ class App extends Component {
         }
     }
 
-    todoItems() {
+    getTodoItems() {
         return this.state.todoData.map(t => <TodoItem key={t.key} data={t} />)
     }
 
     render() {
         return <div className="todo-items">
-            {this.todoItems()}
+            {this.getTodoItems()}
         </div>
     }
 
