@@ -31,3 +31,11 @@ test('todo negates completed state', () => {
   fireEvent.click(todoItemCheckbox)
   expect(todoItemCheckbox.checked).toEqual(true)
 })
+
+test('todo uses handleChange prop when specified', () => {
+  const handleChange = jest.fn()
+  render(<TodoItem data={{text: "TEST_TEXT"}} handleChange={handleChange} />)
+  const todoItemCheckbox = screen.getByRole('checkbox')
+  fireEvent.click(todoItemCheckbox)
+  expect(handleChange).toHaveBeenCalled()
+})

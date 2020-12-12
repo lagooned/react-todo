@@ -22,7 +22,7 @@ class TodoItem extends Component {
             <input
                 type="checkbox"
                 checked={this.state.completed}
-                onChange={this.handleChange}
+                onChange={this.props.handleChange || this.handleChange}
             />
             {this.props.data.text}
         </label>
