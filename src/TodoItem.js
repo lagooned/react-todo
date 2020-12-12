@@ -15,7 +15,11 @@ class TodoItem extends Component {
             <input
                 type="checkbox"
                 checked={this.state.completed}
-                onChange={() => this.setState({completed: !this.state.completed})}
+                onChange={() => this.setState(prevState => {
+                    return {
+                        completed: !prevState.completed
+                    }
+                })}
             />
             {this.props.data.text}
         </label>
