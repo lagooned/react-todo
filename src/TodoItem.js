@@ -10,9 +10,18 @@ class TodoItem extends Component {
         }
     }
 
+    onCompletedChange() {
+        console.log('this.state.completed => #{this.state.completed}')
+    }
+
     render() {
         return <label className="todo-item">
-            <input type="checkbox" checked={this.state.completed}/>{this.props.data.text}
+            <input
+                type="checkbox"
+                checked={this.state.completed}
+                onChange={this.props.onCompletedChange || this.onCompletedChange}
+            />
+            {this.props.data.text}
         </label>
     }
 
