@@ -7,6 +7,10 @@ import todoData from './todoData'
 
 class App extends Component {
 
+    constructor() {
+        super()
+    }
+
     todoItems() {
         return todoData.map(t => <TodoItem key={t.key} data={t} />)
     }
