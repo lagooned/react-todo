@@ -12,10 +12,10 @@ test('todo renders with text', () => {
   expect(todoItemWithSpecificText).toBeInTheDocument()
 });
 
-test('todo calls onCompletedChange onChange', () => {
-  const onChange = jest.fn()
-  render(<TodoItem data={{text: "TEST_TEXT"}} onCompletedChange={onChange}/>)
+test('todo negates completed state', () => {
+  render(<TodoItem data={{text: "TEST_TEXT"}} />)
   const todoItemCheckbox = screen.getByRole('checkbox')
+  expect(todoItemCheckbox.checked).toEqual(false)
   fireEvent.click(todoItemCheckbox)
-  expect(onChange).toHaveBeenCalledTimes(1)
+  expect(todoItemCheckbox.checked).toEqual(true)
 })
