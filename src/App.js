@@ -9,10 +9,13 @@ class App extends Component {
 
     constructor() {
         super()
+        this.state = {
+            todoData: todoData
+        }
     }
 
     todoItems() {
-        return todoData.map(t => <TodoItem key={t.key} data={t} />)
+        return this.state.todoData.map(t => <TodoItem key={t.key} data={t} />)
     }
 
     render() {
