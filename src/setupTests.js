@@ -8,9 +8,9 @@ import '@testing-library/jest-dom';
 // adding this now because i will forget
 // https://github.com/facebook/create-react-app/blob/master/docusaurus/docs/running-tests.md#srcsetuptestsjs-1
 const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+    getItem: jest.fn(),
+    setItem: jest.fn(),
+    removeItem: jest.fn(),
+    clear: jest.fn(),
 };
 global.localStorage = localStorageMock;
