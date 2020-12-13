@@ -11,7 +11,11 @@ class TodoItem extends Component {
         this.handleChange = this.handleChange.bind(this)
     }
 
-    handleChange(event) {
+    handleChange(id) {
+        if (this.props.handleChange) {
+            this.props.handleChange(this.props.data.id)
+            return
+        }
         this.setState(prevState => {
             return {completed: !prevState.completed}
         })
@@ -22,8 +26,7 @@ class TodoItem extends Component {
             <input
                 type="checkbox"
                 checked={this.state.completed}
-                onChange={this.props.handleChange || this.handleChange}
-            />
+                onChange={() => this.handleChange(this.props.data.id)} />
             {this.props.data.text}
         </label>
     }
