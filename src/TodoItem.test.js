@@ -1,5 +1,5 @@
 
-let { test, expect } = global
+import { test, expect, jest } from '@jest/globals'
 import { render, screen, fireEvent } from '@testing-library/react'
 import TodoItem from './TodoItem'
 
