@@ -1,4 +1,6 @@
 import { render, screen } from '@testing-library/react'
+
+let { test, expect } = global
 import App from './App'
 import todoData from './todoData'
 

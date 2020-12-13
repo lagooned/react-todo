@@ -1,4 +1,5 @@
 
+let { test, expect } = global
 import { render, screen, fireEvent } from '@testing-library/react'
 import TodoItem from './TodoItem'
 
